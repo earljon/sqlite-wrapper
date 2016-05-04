@@ -1,13 +1,16 @@
-# sqlite-wrapper
+# node-sqlite-simple
+
 A small wrapper on [node-sqlite3](https://github.com/developmentseed/node-sqlite3) providing simple bindings to most commonly used SQLite functions in standard applications.
+
+This is based on original [sqlite-wrapper](https://github.com/shin-/sqlite-wrapper.git) by **shin**
 
 ## Installation
 
-    npm install sqlite-wrapper
+    npm install node-sqlite-simple
 
 ## Usage
 
-    var db = require('sqlite-wrapper')('/tmp/foo.db');
+    var db = require('node-sqlite-simple')('/tmp/foo.db');
 
 ### Creating tables
 
@@ -52,6 +55,9 @@ A small wrapper on [node-sqlite3](https://github.com/developmentseed/node-sqlite
     // Remove
     db.remove(tableName, 'city_id=?', ['666'], callback);
 
+    // Remove all from table
+    db.removeAll(tableName, callback);
+
     // Select
     db.select(tableName, 
         {'cities': 'cities.id=people.city_id' },
@@ -88,3 +94,6 @@ A small wrapper on [node-sqlite3](https://github.com/developmentseed/node-sqlite
 
     // Remove by id
     db.removeById(tableName, 3, callback);
+
+    // Remove all elements in table
+    db.removeAll(tableName, callback);

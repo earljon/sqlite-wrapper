@@ -1,15 +1,15 @@
 {
-  "name": "sqlite-wrapper",
-  "version": "0.2.1",
-  "description": "Small wrapper on node-sqlite3",
+  "name": "node-sqlite-simple",
+  "version": "1.0",
+  "description": "A simple wrapper on node-sqlite3.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "sqlite3": "2.1.x"
+    "sqlite3": "~3"
   },
-  "repository": "",
+  "repository": "https://github.com/earljon/sqlite-wrapper.git",
   "keywords": [
     "sqlite",
     "database",
@@ -17,6 +17,6 @@
     "persistence",
     "crud"
   ],
-  "author": "Joffrey F <f.joffrey@gmail.com>",
+  "author": "Earljon Hidalgo <earljon@gmail.com>",
   "license": "MIT"
 }
